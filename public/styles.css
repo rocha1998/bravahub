@@ -2459,13 +2459,11 @@ td {
   }
 
   .topbar > .mobile-header-row {
-    display: grid !important;
-    grid-template-columns: 96px minmax(0, 1fr) 96px;
-    align-items: center;
-    gap: 10px;
+    position: relative;
+    display: block !important;
     margin-bottom: 12px;
     width: 100%;
-    min-height: 40px;
+    min-height: 44px;
   }
 
   .topbar > .mobile-header-row > .mobile-header-left,
@@ -2473,25 +2471,33 @@ td {
     display: flex !important;
     align-items: center;
     gap: 14px;
-    width: 96px;
-    min-width: 96px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
   }
 
   .topbar > .mobile-header-row > .mobile-header-left {
+    left: 0;
     justify-content: flex-start;
   }
 
   .topbar > .mobile-header-row > .mobile-header-right {
+    right: 0;
     justify-content: flex-end;
   }
 
   .topbar > .mobile-header-row > .brand-mobile {
     display: flex !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
-    justify-self: center;
-    width: 100%;
+    width: max-content;
     min-width: 0;
     padding: 0 6px;
+    z-index: 1;
   }
 
   .brand-mobile .brand-copy {

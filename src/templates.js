@@ -215,6 +215,7 @@ function header(state) {
           <input id="search-input" type="search" placeholder="O que você está procurando?" />
           <span class="search-icon" aria-hidden="true"></span>
         </label>
+        <div class="mobile-header-actions">
         <nav class="quick-actions">
           <a href="/admin" class="quick-link quick-link-account"><span class="quick-icon" aria-hidden="true"></span><span>Minha conta</span></a>
           <a href="/favoritos" class="quick-link quick-link-favorites"><span class="quick-icon" aria-hidden="true"></span><span>Favoritos</span></a>
@@ -225,6 +226,7 @@ function header(state) {
           <span></span>
           <span></span>
         </button>
+        </div>
       </div>
       <div class="nav-row">
         <div class="nav-links">

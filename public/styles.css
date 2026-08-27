@@ -284,6 +284,10 @@ button {
   gap: 8px;
 }
 
+.mobile-header-actions {
+  display: contents;
+}
+
 .quick-actions a {
   min-height: 50px;
   display: inline-flex;
@@ -1818,18 +1822,19 @@ td {
     align-self: center;
   }
 
-  .quick-actions {
+  .mobile-header-actions {
     order: 2;
     flex: 0 0 auto;
-    grid-template-columns: auto;
-    gap: 0;
-    justify-content: end;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     margin-left: auto;
   }
 
-  .mobile-menu-button {
-    order: 3;
-    flex: 0 0 auto;
+  .quick-actions {
+    grid-template-columns: auto;
+    gap: 0;
+    justify-content: end;
   }
 
   .quick-actions a span:not(.quick-icon),
@@ -1847,6 +1852,10 @@ td {
     justify-content: center;
     padding: 0;
     border-radius: 10px;
+  }
+
+  .mobile-menu-button {
+    flex: 0 0 auto;
   }
 
   .searchbar {
@@ -2291,6 +2300,10 @@ td {
 
   .brand {
     gap: 7px;
+  }
+
+  .mobile-header-actions {
+    gap: 4px;
   }
 
   .brand-mark {

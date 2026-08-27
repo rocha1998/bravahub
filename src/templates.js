@@ -415,10 +415,10 @@ function homePage(state, options = {}) {
       <main class="page-home">
         <section class="mobile-cep-bar mobile-only">
           <div class="mobile-cep-copy">
-            <span class="mobile-cep-icon">ENT</span>
+            <span class="mobile-cep-icon" aria-hidden="true"></span>
             <strong>Informe seu CEP</strong>
           </div>
-          <button class="mobile-cep-action" type="button" aria-label="Acessibilidade">AC</button>
+          <button class="mobile-cep-action" type="button" aria-label="Acessibilidade"></button>
         </section>
         ${categoryStrip(state.categories)}
         ${

@@ -1802,37 +1802,34 @@ td {
   }
 
   .topbar {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    grid-template-areas:
-      "brand cart menu"
-      "search search search";
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     gap: 6px;
     padding: 6px 0 2px;
   }
 
   .brand {
-    grid-area: brand;
+    order: 1;
+    flex: 1 1 auto;
     min-width: 0;
     gap: 8px;
     align-self: center;
   }
 
   .quick-actions {
-    grid-area: cart;
+    order: 2;
+    flex: 0 0 auto;
     grid-template-columns: auto;
     gap: 0;
     justify-content: end;
+    margin-left: auto;
   }
 
   .mobile-menu-button {
-    grid-area: menu;
-    justify-self: end;
-  }
-
-  .quick-actions {
-    justify-self: end;
+    order: 3;
+    flex: 0 0 auto;
   }
 
   .quick-actions a span:not(.quick-icon),
@@ -1853,7 +1850,8 @@ td {
   }
 
   .searchbar {
-    grid-area: search;
+    order: 4;
+    flex: 1 0 100%;
     width: 100%;
     min-height: 48px;
     border-radius: 12px;
@@ -2282,7 +2280,6 @@ td {
   }
 
   .topbar {
-    grid-template-columns: minmax(0, 1fr) auto auto;
     gap: 6px;
     padding: 6px 0 2px;
   }

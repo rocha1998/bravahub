@@ -285,9 +285,7 @@ button {
 }
 
 .mobile-header-row,
-.brand-mobile,
-.mobile-header-left,
-.mobile-header-right {
+.brand-mobile {
   display: none;
 }
 
@@ -2461,16 +2459,11 @@ td {
   .topbar > .mobile-header-row {
     display: grid !important;
     grid-template-columns: 32px 32px minmax(0, 1fr) 32px 32px;
+    align-items: center;
     margin-bottom: 12px;
     width: 100%;
     min-height: 44px;
-    align-items: center;
     column-gap: 14px;
-  }
-
-  .topbar > .mobile-header-row > .mobile-header-left,
-  .topbar > .mobile-header-row > .mobile-header-right {
-    display: contents !important;
   }
 
   .topbar > .mobile-header-row > .brand-mobile {
@@ -2512,7 +2505,8 @@ td {
   }
 
   .mobile-cart-link,
-  .mobile-header-right .quick-link {
+  .mobile-account-link,
+  .mobile-favorites-link {
     position: relative;
     min-width: 32px;
     min-height: 32px;
@@ -2530,15 +2524,16 @@ td {
     grid-column: 2;
   }
 
-  .mobile-header-right .quick-link-account {
+  .mobile-account-link {
     grid-column: 4;
   }
 
-  .mobile-header-right .quick-link-favorites {
+  .mobile-favorites-link {
     grid-column: 5;
   }
 
-  .mobile-header-right .quick-link .quick-icon,
+  .mobile-account-link .quick-icon,
+  .mobile-favorites-link .quick-icon,
   .mobile-cart-link .quick-icon {
     background: transparent;
     width: 30px;

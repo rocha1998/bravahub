@@ -1,5 +1,7 @@
 const { money, escapeHtml, formatDate } = require("./utils");
 
+const ASSET_VERSION = "20260827-3";
+
 function stars(rating) {
   const rounded = Math.round(rating);
   return Array.from({ length: 5 }, (_, index) =>
@@ -39,24 +41,24 @@ const imageAssets = {
 
 const heroImageAssets = [
   {
-    desktop: "/public/images/bainner1.png?v=20260827",
-    mobile: "/public/images/bainner1.png?v=20260827",
+    desktop: "/public/images/bainner1.png?v=20260827-2",
+    mobile: "/public/images/bainner1.png?v=20260827-2",
     width: 1600,
     height: 600,
     mobileWidth: 1600,
     mobileHeight: 600
   },
   {
-    desktop: "/public/images/bainner2.png?v=20260827",
-    mobile: "/public/images/bainner2.png?v=20260827",
+    desktop: "/public/images/bainner2.png?v=20260827-2",
+    mobile: "/public/images/bainner2.png?v=20260827-2",
     width: 1600,
     height: 600,
     mobileWidth: 1600,
     mobileHeight: 600
   },
   {
-    desktop: "/public/images/bainner3.png?v=20260827",
-    mobile: "/public/images/bainner3.png?v=20260827",
+    desktop: "/public/images/bainner3.png?v=20260827-2",
+    mobile: "/public/images/bainner3.png?v=20260827-2",
     width: 1600,
     height: 600,
     mobileWidth: 1600,
@@ -351,14 +353,14 @@ function pageLayout({ title, state, content, bodyClass = "" }) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>${escapeHtml(title)}</title>
-        <link rel="stylesheet" href="/public/styles.css" />
+        <link rel="stylesheet" href="/public/styles.css?v=${ASSET_VERSION}" />
       </head>
       <body class="${escapeHtml(bodyClass)}">
         ${header(state)}
         ${content}
         ${footer(state)}
         <script>window.__INITIAL_STATE__ = ${JSON.stringify(state)};</script>
-        <script src="/public/app.js" defer></script>
+        <script src="/public/app.js?v=${ASSET_VERSION}" defer></script>
       </body>
     </html>
   `;

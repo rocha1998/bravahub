@@ -2329,10 +2329,6 @@ td {
     height: 54px;
   }
 
-  .hero-slide-banner {
-    aspect-ratio: 1 / 1;
-  }
-
   .mobile-finance-strip {
     padding: 12px 14px;
   }
@@ -2367,10 +2363,6 @@ td {
     grid-auto-columns: 168px;
   }
 
-  .hero-slide-banner {
-    aspect-ratio: 1 / 1;
-  }
-
   .mobile-finance-card {
     grid-template-columns: 96px 1fr;
   }
@@ -2392,10 +2384,6 @@ td {
   .search-icon {
     min-width: 66px;
     font-size: 0.68rem;
-  }
-
-  .hero-slide-banner {
-    aspect-ratio: 1 / 1;
   }
 
   .mobile-finance-strip span {

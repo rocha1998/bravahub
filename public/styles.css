@@ -2459,12 +2459,14 @@ td {
   }
 
   .topbar > .mobile-header-row {
-    display: grid !important;
-    grid-template-columns: 1fr auto 1fr;
+    position: relative;
+    display: flex !important;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     margin-bottom: 12px;
     width: 100%;
+    min-height: 40px;
   }
 
   .topbar > .mobile-header-row > .mobile-header-left,
@@ -2487,10 +2489,14 @@ td {
 
   .topbar > .mobile-header-row > .brand-mobile {
     display: flex !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
-    justify-self: center;
     min-width: 0;
     padding: 0 6px;
+    z-index: 1;
   }
 
   .brand-mobile .brand-copy {

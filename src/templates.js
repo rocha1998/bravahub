@@ -37,6 +37,33 @@ const imageAssets = {
   blender: { src: "/public/images/liquidificador.webp", width: 1374, height: 1145, inset: "standard" }
 };
 
+const heroImageAssets = [
+  {
+    desktop: "/public/images/bainner1.webp",
+    mobile: "/public/images/bainner1-mobile.webp",
+    width: 1600,
+    height: 600,
+    mobileWidth: 1080,
+    mobileHeight: 1350
+  },
+  {
+    desktop: "/public/images/bainner2.webp",
+    mobile: "/public/images/bainner2-mobile.webp",
+    width: 1600,
+    height: 600,
+    mobileWidth: 1080,
+    mobileHeight: 1350
+  },
+  {
+    desktop: "/public/images/bainner3.webp",
+    mobile: "/public/images/bainner3-mobile.webp",
+    width: 1600,
+    height: 600,
+    mobileWidth: 1080,
+    mobileHeight: 1350
+  }
+];
+
 function renderProductAsset(imageName, alt, options = {}) {
   const asset = imageAssets[imageName];
   if (!asset) {
@@ -55,6 +82,27 @@ function renderProductAsset(imageName, alt, options = {}) {
       loading="${loading}"
       decoding="async"
     />
+  `;
+}
+
+function renderHeroBannerImage(index, alt) {
+  const asset = heroImageAssets[index];
+  if (!asset) {
+    return "";
+  }
+
+  return `
+    <picture class="hero-picture">
+      <source media="(max-width: 600px)" srcset="${asset.mobile}" />
+      <img
+        class="hero-banner-image"
+        src="${asset.desktop}"
+        alt="${escapeHtml(alt)}"
+        width="${asset.width}"
+        height="${asset.height}"
+        decoding="async"
+      />
+    </picture>
   `;
 }
 
@@ -154,7 +202,11 @@ function header(state) {
         <div class="promo-privacy">Privacidade respeitada. Cancele quando quiser.</div>
       </div>
       <div class="topbar">
-        <button class="mobile-menu-button" type="button">Menu</button>
+        <button class="mobile-menu-button" type="button" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <a href="/" class="brand">
           <span class="brand-mark">B</span>
           <div class="brand-copy">
@@ -347,6 +399,7 @@ function homePage(state, options = {}) {
     .map(
       (banner, index) => `
       <article class="hero-slide theme-${escapeHtml(banner.theme)} ${index <= 2 ? `hero-slide-banner hero-slide-banner-${index + 1}` : ""}">
+        ${index <= 2 ? renderHeroBannerImage(index, banner.title) : ""}
         <div class="hero-copy">
           <span class="eyebrow">BravaHub Prime</span>
           <h1>${escapeHtml(banner.title)}</h1>

@@ -206,12 +206,12 @@ function header(state) {
         </a>
         <label class="searchbar">
           <input id="search-input" type="search" placeholder="O que você está procurando?" />
-          <span class="search-icon">Buscar</span>
+          <span class="search-icon" aria-hidden="true"></span>
         </label>
         <nav class="quick-actions">
-          <a href="/admin"><span class="quick-icon">A</span><span>Minha conta</span></a>
-          <a href="/favoritos"><span class="quick-icon">F</span><span>Favoritos</span></a>
-          <a href="/carrinho"><span class="quick-icon">C</span><span>Carrinho</span><strong id="cart-count">0</strong></a>
+          <a href="/admin" class="quick-link quick-link-account"><span class="quick-icon" aria-hidden="true"></span><span>Minha conta</span></a>
+          <a href="/favoritos" class="quick-link quick-link-favorites"><span class="quick-icon" aria-hidden="true"></span><span>Favoritos</span></a>
+          <a href="/carrinho" class="quick-link quick-link-cart"><span class="quick-icon" aria-hidden="true"></span><span>Carrinho</span><strong id="cart-count">0</strong></a>
         </nav>
       </div>
       <div class="nav-row">

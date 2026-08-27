@@ -258,6 +258,26 @@ button {
   background: linear-gradient(180deg, #ffffff, #f5f7fc);
 }
 
+.search-icon::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  transform: translate(-1px, -1px);
+}
+
+.search-icon::after {
+  content: "";
+  width: 8px;
+  height: 2px;
+  margin-top: -2px;
+  margin-left: 12px;
+  background: currentColor;
+  transform: rotate(45deg);
+  transform-origin: left center;
+}
+
 .quick-actions {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -299,6 +319,87 @@ button {
   color: var(--primary);
   font-size: 0.7rem;
   font-weight: 900;
+}
+
+.quick-link .quick-icon {
+  position: relative;
+  background: transparent;
+}
+
+.quick-link-account .quick-icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+}
+
+.quick-link-account .quick-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 14px;
+  height: 8px;
+  margin-left: -7px;
+  border: 2px solid currentColor;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 0;
+}
+
+.quick-link-favorites .quick-icon::before,
+.quick-link-favorites .quick-icon::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 8px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-bottom: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: transparent;
+}
+
+.quick-link-favorites .quick-icon::before {
+  left: 4px;
+  transform: rotate(-45deg);
+  transform-origin: bottom right;
+}
+
+.quick-link-favorites .quick-icon::after {
+  right: 4px;
+  transform: rotate(45deg);
+  transform-origin: bottom left;
+}
+
+.quick-link-cart .quick-icon::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 13px;
+  height: 8px;
+  border: 2px solid currentColor;
+  border-left: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.quick-link-cart .quick-icon::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 14px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(65deg);
+  transform-origin: left center;
 }
 
 .nav-row {
@@ -1739,18 +1840,6 @@ td {
     height: 48px;
   }
 
-  .home-page-body .searchbar {
-    display: none !important;
-  }
-
-  .home-page-body .quick-actions {
-    display: none !important;
-  }
-
-  .home-page-body .topbar {
-    grid-template-columns: 42px minmax(0, 1fr);
-  }
-
   .mobile-only,
   .mobile-cep-bar,
   .mobile-finance-strip,
@@ -1779,7 +1868,7 @@ td {
 
   .mobile-cep-copy strong {
     font-size: 0.98rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .mobile-cep-icon,
@@ -1914,10 +2003,8 @@ td {
   }
 
   .hero-carousel {
-    margin: 0 -8px 10px;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
+    margin: 0 0 10px;
+    border-radius: 10px;
     box-shadow: none;
   }
 
@@ -1928,7 +2015,7 @@ td {
   }
 
   .hero-slide-banner {
-    aspect-ratio: 2.3 / 1;
+    aspect-ratio: 1.9 / 1;
   }
 
   .hero-slide-banner .hero-art {
@@ -1969,7 +2056,7 @@ td {
   }
 
   .hero-dots {
-    bottom: 2px;
+    bottom: 6px;
     gap: 10px;
   }
 
@@ -2059,6 +2146,17 @@ td {
     background: transparent;
     border: 0;
     box-shadow: none;
+  }
+
+  .active-filters {
+    margin: 0 0 8px;
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    min-height: 0;
+  }
+
+  .active-filters strong {
+    font-size: 0.95rem;
   }
 
   .flash-head h2,
@@ -2155,10 +2253,6 @@ td {
     --container: calc(100vw - 12px);
   }
 
-  .home-page-body .topbar {
-    grid-template-columns: 40px minmax(0, 1fr);
-  }
-
   .topbar {
     grid-template-columns: 40px minmax(0, 1fr) auto;
     gap: 6px;
@@ -2227,7 +2321,7 @@ td {
   }
 
   .hero-slide-banner {
-    aspect-ratio: 2.15 / 1;
+    aspect-ratio: 1.78 / 1;
   }
 
   .mobile-finance-strip {
@@ -2265,7 +2359,7 @@ td {
   }
 
   .hero-slide-banner {
-    aspect-ratio: 2.05 / 1;
+    aspect-ratio: 1.7 / 1;
   }
 
   .mobile-finance-card {
@@ -2292,7 +2386,7 @@ td {
   }
 
   .hero-slide-banner {
-    aspect-ratio: 2 / 1;
+    aspect-ratio: 1.6 / 1;
   }
 
   .mobile-finance-strip span {

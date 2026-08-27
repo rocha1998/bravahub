@@ -1,0 +1,700 @@
+{
+  "store": {
+    "name": "CasasBahia",
+    "tagline": "Tecnologia, casa e ofertas com entrega agilizada",
+    "company": {
+      "legalName": "CasasBahia Comercio Digital Ltda.",
+      "cnpj": "12.345.678/0001-90",
+      "address": "Av. Atlantica, 1250 - Salvador - BA",
+      "supportPhone": "0800-000-0000",
+      "whatsapp": "(71) 90000-0000"
+    }
+  },
+  "categories": [
+    {
+      "id": "ofertas",
+      "name": "Ofertas",
+      "icon": "tag"
+    },
+    {
+      "id": "dia",
+      "name": "Ofertas do Dia",
+      "icon": "flash"
+    },
+    {
+      "id": "eletro",
+      "name": "Eletrodomésticos",
+      "icon": "fridge"
+    },
+    {
+      "id": "portateis",
+      "name": "Portáteis",
+      "icon": "oven"
+    },
+    {
+      "id": "tvs",
+      "name": "TVs",
+      "icon": "tv"
+    },
+    {
+      "id": "iphone",
+      "name": "iPhone",
+      "icon": "phone"
+    },
+    {
+      "id": "smartphones",
+      "name": "Smartphones",
+      "icon": "mobile"
+    },
+    {
+      "id": "moveis",
+      "name": "Móveis",
+      "icon": "sofa"
+    },
+    {
+      "id": "ar",
+      "name": "Ar e Ventilação",
+      "icon": "fan"
+    }
+  ],
+  "products": [
+    {
+      "id": "air-fryer-oven-12l",
+      "slug": "air-fryer-oven-12l",
+      "name": "Air Fryer Oven 12L Gourmet Heat",
+      "category": "portateis",
+      "price": 171.3,
+      "oldPrice": 571,
+      "installments": 10,
+      "installmentValue": 17.13,
+      "rating": 4.8,
+      "reviews": 284,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Retira Rápido",
+        "Exclusivo"
+      ],
+      "pixText": "No Pix",
+      "description": "Air fryer com 12 litros, visor frontal e programas para assar, gratinar e aquecer.",
+      "specs": [
+        "12L",
+        "1700W",
+        "Painel digital",
+        "Cesto antiaderente"
+      ],
+      "images": [
+        "airfryer"
+      ],
+      "stock": 18
+    },
+    {
+      "id": "moto-g47-5g",
+      "slug": "moto-g47-5g",
+      "name": "Smartphone Moto G47 5G 128GB",
+      "category": "smartphones",
+      "price": 463.16,
+      "oldPrice": 1543.86,
+      "installments": 12,
+      "installmentValue": 38.6,
+      "rating": 4.7,
+      "reviews": 327,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Frete Grátis"
+      ],
+      "pixText": "No Pix",
+      "description": "Smartphone com tela fluida, câmera de alta resolução e bateria para o dia todo.",
+      "specs": [
+        "128GB",
+        "8GB RAM",
+        "5G",
+        "Câmera 50MP"
+      ],
+      "images": [
+        "moto"
+      ],
+      "stock": 25
+    },
+    {
+      "id": "smart-tv-aoc-43",
+      "slug": "smart-tv-aoc-43",
+      "name": "Smart TV 43 Full HD Stream Vision",
+      "category": "tvs",
+      "price": 550.48,
+      "oldPrice": 1834.92,
+      "installments": 10,
+      "installmentValue": 55.05,
+      "rating": 4.7,
+      "reviews": 418,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Lançamento"
+      ],
+      "pixText": "No Pix",
+      "description": "TV 43 polegadas com apps integrados, HDR e assistentes de voz.",
+      "specs": [
+        "43 pol",
+        "Full HD",
+        "Wi-Fi",
+        "HDR"
+      ],
+      "images": [
+        "smarttv43"
+      ],
+      "stock": 11
+    },
+    {
+      "id": "geladeira-frost-455l",
+      "slug": "geladeira-frost-455l",
+      "name": "Geladeira Frost 455L Duplex Inverter",
+      "category": "eletro",
+      "price": 1099.33,
+      "oldPrice": 3664.45,
+      "installments": 10,
+      "installmentValue": 109.93,
+      "rating": 4.8,
+      "reviews": 563,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Retira Rápido"
+      ],
+      "pixText": "No Pix",
+      "description": "Geladeira frost free duplex com tecnologia inverter e amplo espaço interno.",
+      "specs": [
+        "455L",
+        "Frost Free",
+        "Inverter",
+        "Classe A"
+      ],
+      "images": [
+        "fridge"
+      ],
+      "stock": 7
+    },
+    {
+      "id": "aspirador-1400w",
+      "slug": "aspirador-1400w",
+      "name": "Aspirador de Pó e Água 1400W Clean Max",
+      "category": "eletro",
+      "price": 92.07,
+      "oldPrice": 306.9,
+      "installments": 5,
+      "installmentValue": 18.41,
+      "rating": 4.9,
+      "reviews": 8921,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Retira Rápido"
+      ],
+      "pixText": "No Pix",
+      "description": "Aspirador versatil para limpeza de pisos, tapetes e liquidos.",
+      "specs": [
+        "1400W",
+        "20L",
+        "Aspiracao de agua",
+        "Bocal multipiso"
+      ],
+      "images": [
+        "vacuum"
+      ],
+      "stock": 22
+    },
+    {
+      "id": "guarda-roupa-villa",
+      "slug": "guarda-roupa-villa",
+      "name": "Guarda-Roupa Casal Villa 6 Portas",
+      "category": "moveis",
+      "price": 435.21,
+      "oldPrice": 1450.69,
+      "installments": 10,
+      "installmentValue": 43.52,
+      "rating": 4.7,
+      "reviews": 2748,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Sul e Sudeste"
+      ],
+      "pixText": "No Pix",
+      "description": "Armário casal com divisórias amplas, cabideiro metálico e acabamento fosco.",
+      "specs": [
+        "6 portas",
+        "MDF/MDP",
+        "Cabideiros",
+        "Montagem simples"
+      ],
+      "images": [
+        "wardrobe"
+      ],
+      "stock": 9
+    },
+    {
+      "id": "console-nextgen-825",
+      "slug": "console-nextgen-825",
+      "name": "Console NextGen 825GB Edição Digital",
+      "category": "portateis",
+      "price": 1379.7,
+      "oldPrice": 4599,
+      "installments": 12,
+      "installmentValue": 114.98,
+      "rating": 4.9,
+      "reviews": 689,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Full"
+      ],
+      "pixText": "No Pix",
+      "description": "Console de última geração com armazenamento SSD e controle sem fio.",
+      "specs": [
+        "825GB",
+        "SSD",
+        "Controle sem fio",
+        "Ray tracing"
+      ],
+      "images": [
+        "console"
+      ],
+      "stock": 13
+    },
+    {
+      "id": "iphone-cosmico-256",
+      "slug": "iphone-cosmico-256",
+      "name": "Apple iPhone 17 Pro (256 GB) - Laranja-cósmico",
+      "category": "iphone",
+      "price": 4373.7,
+      "oldPrice": 14579,
+      "installments": 12,
+      "installmentValue": 364.47,
+      "rating": 4.8,
+      "reviews": 915,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Premium"
+      ],
+      "pixText": "No Pix",
+      "description": "Smartphone premium com acabamento metálico, câmera tripla e tela OLED.",
+      "specs": [
+        "256GB",
+        "OLED",
+        "Câmera Pro",
+        "USB-C"
+      ],
+      "images": [
+        "orangephone"
+      ],
+      "stock": 5
+    },
+    {
+      "id": "notebook-bookgo-14",
+      "slug": "notebook-bookgo-14",
+      "name": "Notebook 14 Book Go Performance",
+      "category": "portateis",
+      "price": 928.39,
+      "oldPrice": 3094.63,
+      "installments": 10,
+      "installmentValue": 92.84,
+      "rating": 4.5,
+      "reviews": 472,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Retira Rápido"
+      ],
+      "pixText": "No Pix",
+      "description": "Notebook leve para estudo e trabalho, com SSD rápido e bateria estendida.",
+      "specs": [
+        "14 pol",
+        "SSD 512GB",
+        "8GB RAM",
+        "Tela IPS"
+      ],
+      "images": [
+        "laptop"
+      ],
+      "stock": 16
+    },
+    {
+      "id": "sofa-retratil-verona",
+      "slug": "sofa-retratil-verona",
+      "name": "Sofá Retrátil Verona 1,80m",
+      "category": "moveis",
+      "price": 584.97,
+      "oldPrice": 1949.9,
+      "installments": 10,
+      "installmentValue": 58.5,
+      "rating": 4.7,
+      "reviews": 731,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Frete no app"
+      ],
+      "pixText": "No Pix",
+      "description": "Sofá retrátil com espuma de alta densidade e revestimento aveludado.",
+      "specs": [
+        "1,80m",
+        "Retrátil",
+        "Espuma D28",
+        "Suede"
+      ],
+      "images": [
+        "sofa"
+      ],
+      "stock": 8
+    },
+    {
+      "id": "cama-box-bau",
+      "slug": "cama-box-bau",
+      "name": "Cama Box Baú Casal Comfort Plus",
+      "category": "moveis",
+      "price": 394.17,
+      "oldPrice": 1313.9,
+      "installments": 10,
+      "installmentValue": 39.42,
+      "rating": 4.6,
+      "reviews": 356,
+      "badge": "Baixou 70%",
+      "tags": [],
+      "pixText": "No Pix",
+      "description": "Cama box com baú amplo, colchão de molas ensacadas e estrutura reforçada.",
+      "specs": [
+        "Casal",
+        "Bau",
+        "Molas ensacadas",
+        "Base reforçada"
+      ],
+      "images": [
+        "bed"
+      ],
+      "stock": 10
+    },
+    {
+      "id": "liquidificador-turbo",
+      "slug": "liquidificador-turbo",
+      "name": "Liquidificador Turbo Power 1200W",
+      "category": "portateis",
+      "price": 36.59,
+      "oldPrice": 121.98,
+      "installments": 2,
+      "installmentValue": 18.3,
+      "rating": 4.5,
+      "reviews": 9476,
+      "badge": "Baixou 70%",
+      "tags": [
+        "Patrocinado",
+        "Retira Rápido"
+      ],
+      "pixText": "No Pix",
+      "description": "Liquidificador com copo resistente, múltiplas velocidades e lâminas inox.",
+      "specs": [
+        "1200W",
+        "3L",
+        "6 velocidades",
+        "Pulsar"
+      ],
+      "images": [
+        "blender"
+      ],
+      "stock": 30
+    }
+  ],
+  "banners": [
+    {
+      "id": "banner-1",
+      "title": "Ofertas que cabem no seu bolso",
+      "subtitle": "Eletrônicos, móveis e utilidades com descontos reais",
+      "cta": "Explorar promoções",
+      "theme": "sunrise"
+    },
+    {
+      "id": "banner-2",
+      "title": "Compre online com entrega rápida",
+      "subtitle": "Acompanhe cada etapa do pedido sem complicação",
+      "cta": "Ver pedidos",
+      "theme": "ocean"
+    },
+    {
+      "id": "banner-3",
+      "title": "Tecnologia, casa e muito mais",
+      "subtitle": "Uma vitrine completa com cara de grande varejo",
+      "cta": "Comprar agora",
+      "theme": "ruby"
+    }
+  ],
+  "coupons": [
+    {
+      "code": "BEMVINDO10",
+      "discount": 0.1,
+      "title": "Cupom de boas-vindas"
+    },
+    {
+      "code": "FRETEGRATIS",
+      "discount": 0.05,
+      "title": "Desconto logístico"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-1007",
+      "trackingCode": "BT604575382BR",
+      "customer": {
+        "name": "RAFAEL DE CARVALHO ROCHA SOARES",
+        "cpf": "13743426617",
+        "email": "techxugo@gmail.com",
+        "phone": "31991356129"
+      },
+      "address": {
+        "cep": "31995-450",
+        "street": "Rua São Teófilo",
+        "number": "298",
+        "complement": "",
+        "district": "Paulo vi",
+        "city": "Belo Horizonte",
+        "state": "MG"
+      },
+      "items": [
+        {
+          "productId": "smart-tv-aoc-43",
+          "quantity": 1,
+          "unitPrice": 550.48
+        }
+      ],
+      "subtotal": 550.48,
+      "shipping": 29.9,
+      "discount": 0,
+      "total": 580.38,
+      "paymentMethod": "Pix",
+      "status": "Pedido confirmado",
+      "createdAt": "2026-08-26T23:36:10.814Z"
+    },
+    {
+      "id": "ORD-1006",
+      "trackingCode": "BT857011048BR",
+      "customer": {
+        "email": "pix@example.com",
+        "cpf": "00011122233",
+        "name": "Teste Pix",
+        "phone": "71999999999"
+      },
+      "address": {
+        "street": "Rua Pix",
+        "city": "Salvador",
+        "number": "10",
+        "district": "Centro",
+        "cep": "40000000",
+        "state": "BA",
+        "complement": ""
+      },
+      "items": [
+        {
+          "unitPrice": 550.48,
+          "quantity": 1,
+          "productId": "smart-tv-aoc-43"
+        }
+      ],
+      "subtotal": 550.48,
+      "shipping": 29.9,
+      "discount": 0,
+      "total": 580.38,
+      "paymentMethod": "Pix",
+      "status": "Pedido confirmado",
+      "createdAt": "2026-08-26T03:24:11.821Z"
+    },
+    {
+      "id": "ORD-1005",
+      "trackingCode": "BT567279748BR",
+      "customer": {
+        "name": "RAFAEL C ROCHA SOAR",
+        "cpf": "13743426617",
+        "email": "techxugo@gmail.com",
+        "phone": "31982757072"
+      },
+      "address": {
+        "cep": "31995450",
+        "street": "R S Teofilo",
+        "number": "298",
+        "complement": "",
+        "district": "Paulo vi",
+        "city": "Belo Horizonte",
+        "state": "MG"
+      },
+      "items": [
+        {
+          "productId": "air-fryer-oven-12l",
+          "quantity": 1,
+          "unitPrice": 499
+        }
+      ],
+      "subtotal": 499,
+      "shipping": 29.9,
+      "discount": 0,
+      "total": 528.9,
+      "paymentMethod": "Pix",
+      "status": "liberado",
+      "createdAt": "2026-08-25T18:13:44.478Z"
+    },
+    {
+      "id": "ORD-1004",
+      "trackingCode": "BT954953814BR",
+      "customer": {
+        "email": "visual@example.com",
+        "cpf": "999.888.777-66",
+        "name": "Teste Visual",
+        "phone": "(71)97777-1212"
+      },
+      "address": {
+        "street": "Rua B",
+        "city": "Salvador",
+        "number": "200",
+        "district": "Centro",
+        "cep": "40000-000",
+        "state": "BA",
+        "complement": "Sala 1"
+      },
+      "items": [
+        {
+          "unitPrice": 1078.06,
+          "quantity": 1,
+          "productId": "moto-g47-5g"
+        }
+      ],
+      "subtotal": 1078.06,
+      "shipping": 29.9,
+      "discount": 0,
+      "total": 1107.96,
+      "paymentMethod": "Pix",
+      "status": "Pedido confirmado",
+      "createdAt": "2026-08-25T18:08:08.272Z"
+    },
+    {
+      "id": "ORD-1003",
+      "trackingCode": "BT519144310BR",
+      "customer": {
+        "email": "teste@example.com",
+        "cpf": "111.222.333-44",
+        "name": "Teste Cliente",
+        "phone": "(71)99999-0000"
+      },
+      "address": {
+        "street": "Rua A",
+        "city": "Salvador",
+        "number": "10",
+        "district": "Centro",
+        "cep": "40000-000",
+        "state": "BA",
+        "complement": ""
+      },
+      "items": [
+        {
+          "unitPrice": 499,
+          "quantity": 1,
+          "productId": "air-fryer-oven-12l"
+        }
+      ],
+      "subtotal": 499,
+      "shipping": 29.9,
+      "discount": 0,
+      "total": 528.9,
+      "paymentMethod": "Pix",
+      "status": "Pedido confirmado",
+      "createdAt": "2026-08-25T17:46:30.225Z"
+    },
+    {
+      "id": "ORD-1001",
+      "trackingCode": "BT123456789BR",
+      "customer": {
+        "name": "Mariana Costa",
+        "cpf": "123.456.789-00",
+        "email": "mariana@example.com",
+        "phone": "(71) 98888-0000"
+      },
+      "address": {
+        "cep": "40000-000",
+        "street": "Rua das Palmeiras",
+        "number": "120",
+        "complement": "Ap 34",
+        "district": "Centro",
+        "city": "Salvador",
+        "state": "BA"
+      },
+      "items": [
+        {
+          "productId": "air-fryer-oven-12l",
+          "quantity": 1,
+          "unitPrice": 499
+        }
+      ],
+      "subtotal": 499,
+      "shipping": 29.9,
+      "discount": 0,
+      "total": 528.9,
+      "paymentMethod": "Pix",
+      "status": "Pedido confirmado",
+      "createdAt": "2026-08-25T14:00:00.000Z"
+    }
+  ],
+  "trackingEvents": [
+    {
+      "trackingCode": "BT604575382BR",
+      "events": [
+        {
+          "status": "Pedido confirmado",
+          "description": "Seu pedido foi confirmado e entrou na fila de separacao.",
+          "date": "2026-08-26T23:36:10.814Z"
+        }
+      ]
+    },
+    {
+      "trackingCode": "BT857011048BR",
+      "events": [
+        {
+          "status": "Pedido confirmado",
+          "description": "Seu pedido foi confirmado e entrou na fila de separação.",
+          "date": "2026-08-26T03:24:11.821Z"
+        }
+      ]
+    },
+    {
+      "trackingCode": "BT567279748BR",
+      "events": [
+        {
+          "status": "liberado",
+          "description": "a caminho",
+          "date": "2026-08-25T18:23:39.922Z"
+        },
+        {
+          "status": "Pedido confirmado",
+          "description": "Seu pedido foi confirmado e entrou na fila de separação.",
+          "date": "2026-08-25T18:13:44.478Z"
+        }
+      ]
+    },
+    {
+      "trackingCode": "BT954953814BR",
+      "events": [
+        {
+          "status": "Pedido confirmado",
+          "description": "Seu pedido foi confirmado e entrou na fila de separação.",
+          "date": "2026-08-25T18:08:08.272Z"
+        }
+      ]
+    },
+    {
+      "trackingCode": "BT519144310BR",
+      "events": [
+        {
+          "status": "Pedido confirmado",
+          "description": "Seu pedido foi confirmado e entrou na fila de separação.",
+          "date": "2026-08-25T17:46:30.225Z"
+        }
+      ]
+    },
+    {
+      "trackingCode": "BT123456789BR",
+      "events": [
+        {
+          "status": "Pedido confirmado",
+          "description": "Seu pedido foi recebido e está em preparação.",
+          "date": "2026-08-25T14:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}

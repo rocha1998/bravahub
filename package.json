@@ -1,0 +1,10 @@
+{
+  "name": "casasbahia-store",
+  "version": "1.0.0",
+  "description": "Loja virtual com identidade propria e fluxo completo de pedido e rastreamento.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}

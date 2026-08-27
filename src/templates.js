@@ -1,6 +1,6 @@
 const { money, escapeHtml, formatDate } = require("./utils");
 
-const ASSET_VERSION = "20260827-3";
+const ASSET_VERSION = "20260827-4";
 
 function stars(rating) {
   const rounded = Math.round(rating);

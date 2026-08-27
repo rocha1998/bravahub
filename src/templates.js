@@ -39,28 +39,28 @@ const imageAssets = {
 
 const heroImageAssets = [
   {
-    desktop: "/public/images/bainner1.webp?v=20260827",
-    mobile: "/public/images/bainner1-mobile.webp?v=20260827",
+    desktop: "/public/images/bainner1.png?v=20260827",
+    mobile: "/public/images/bainner1.png?v=20260827",
     width: 1600,
     height: 600,
-    mobileWidth: 1080,
-    mobileHeight: 1350
+    mobileWidth: 1600,
+    mobileHeight: 600
   },
   {
-    desktop: "/public/images/bainner2.webp?v=20260827",
-    mobile: "/public/images/bainner2-mobile.webp?v=20260827",
+    desktop: "/public/images/bainner2.png?v=20260827",
+    mobile: "/public/images/bainner2.png?v=20260827",
     width: 1600,
     height: 600,
-    mobileWidth: 1080,
-    mobileHeight: 1350
+    mobileWidth: 1600,
+    mobileHeight: 600
   },
   {
-    desktop: "/public/images/bainner3.webp?v=20260827",
-    mobile: "/public/images/bainner3-mobile.webp?v=20260827",
+    desktop: "/public/images/bainner3.png?v=20260827",
+    mobile: "/public/images/bainner3.png?v=20260827",
     width: 1600,
     height: 600,
-    mobileWidth: 1080,
-    mobileHeight: 1350
+    mobileWidth: 1600,
+    mobileHeight: 600
   }
 ];
 

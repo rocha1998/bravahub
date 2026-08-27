@@ -204,11 +204,6 @@ function header(state) {
         <div class="promo-privacy">Privacidade respeitada. Cancele quando quiser.</div>
       </div>
       <div class="topbar">
-        <button class="mobile-menu-button" type="button" aria-label="Abrir menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
         <a href="/" class="brand">
           <span class="brand-mark">B</span>
           <div class="brand-copy">
@@ -225,6 +220,11 @@ function header(state) {
           <a href="/favoritos" class="quick-link quick-link-favorites"><span class="quick-icon" aria-hidden="true"></span><span>Favoritos</span></a>
           <a href="/carrinho" class="quick-link quick-link-cart"><span class="quick-icon" aria-hidden="true"></span><span>Carrinho</span><strong id="cart-count">0</strong></a>
         </nav>
+        <button class="mobile-menu-button" type="button" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
       <div class="nav-row">
         <div class="nav-links">
@@ -425,13 +425,6 @@ function homePage(state, options = {}) {
     bodyClass: "home-page-body",
     content: `
       <main class="page-home">
-        <section class="mobile-cep-bar mobile-only">
-          <div class="mobile-cep-copy">
-            <span class="mobile-cep-icon" aria-hidden="true"></span>
-            <strong>Informe seu CEP</strong>
-          </div>
-          <button class="mobile-cep-action" type="button" aria-label="Acessibilidade"></button>
-        </section>
         ${categoryStrip(state.categories)}
         ${
           q || category

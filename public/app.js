@@ -64,10 +64,9 @@
 
   function updateCartCount() {
     const count = getCart().reduce((total, item) => total + item.quantity, 0);
-    const badge = document.getElementById("cart-count");
-    if (badge) {
+    document.querySelectorAll("[data-cart-count]").forEach((badge) => {
       badge.textContent = count;
-    }
+    });
   }
 
   function addToCart(productId, quantity) {

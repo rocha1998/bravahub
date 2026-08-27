@@ -284,6 +284,13 @@ button {
   gap: 8px;
 }
 
+.mobile-header-row,
+.brand-mobile,
+.mobile-header-left,
+.mobile-header-right {
+  display: none;
+}
+
 .mobile-header-actions {
   display: contents;
 }
@@ -2436,5 +2443,122 @@ td {
 
   .category-card {
     flex-basis: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    display: block;
+    padding: 8px 0 4px;
+  }
+
+  .brand-desktop,
+  .quick-actions-desktop,
+  .mobile-header-actions {
+    display: none;
+  }
+
+  .mobile-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-header-left,
+  .mobile-header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .brand-mobile {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: center;
+    padding: 0 8px;
+  }
+
+  .brand-mobile .brand-copy {
+    text-align: center;
+  }
+
+  .brand-mobile .brand-copy strong {
+    font-size: 1.18rem;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .brand-mobile .brand-copy small {
+    margin-top: 3px;
+    font-size: 0.54rem;
+    letter-spacing: 0.08em;
+  }
+
+  .mobile-menu-button {
+    display: inline-grid;
+    place-items: center;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .mobile-cart-link,
+  .mobile-header-right .quick-link {
+    position: relative;
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .mobile-header-right .quick-link .quick-icon,
+  .mobile-cart-link .quick-icon {
+    background: transparent;
+  }
+
+  .mobile-cart-link [data-cart-count] {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 999px;
+    display: inline-grid;
+    place-items: center;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.64rem;
+    line-height: 1;
+    font-weight: 800;
+  }
+
+  .searchbar {
+    width: 100%;
+    min-height: 48px;
+    border-radius: 12px;
+  }
+
+  .searchbar input,
+  .search-icon {
+    height: 48px;
+  }
+
+  .searchbar input {
+    font-size: 0.92rem;
+    padding-inline: 14px;
+  }
+
+  .search-icon {
+    min-width: 64px;
   }
 }

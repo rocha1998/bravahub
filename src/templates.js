@@ -204,7 +204,30 @@ function header(state) {
         <div class="promo-privacy">Privacidade respeitada. Cancele quando quiser.</div>
       </div>
       <div class="topbar">
-        <a href="/" class="brand">
+        <div class="mobile-header-row">
+          <div class="mobile-header-left">
+            <button class="mobile-menu-button" type="button" aria-label="Abrir menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <a href="/carrinho" class="quick-link quick-link-cart mobile-cart-link" aria-label="Carrinho">
+              <span class="quick-icon" aria-hidden="true"></span>
+              <strong data-cart-count>0</strong>
+            </a>
+          </div>
+          <a href="/" class="brand brand-mobile">
+            <div class="brand-copy">
+              <strong>${escapeHtml(state.store.name)}</strong>
+              <small>loja online</small>
+            </div>
+          </a>
+          <div class="mobile-header-right">
+            <a href="/admin" class="quick-link quick-link-account" aria-label="Minha conta"><span class="quick-icon" aria-hidden="true"></span></a>
+            <a href="/favoritos" class="quick-link quick-link-favorites" aria-label="Favoritos"><span class="quick-icon" aria-hidden="true"></span></a>
+          </div>
+        </div>
+        <a href="/" class="brand brand-desktop">
           <span class="brand-mark">B</span>
           <div class="brand-copy">
             <strong>${escapeHtml(state.store.name)}</strong>
@@ -216,10 +239,10 @@ function header(state) {
           <span class="search-icon" aria-hidden="true"></span>
         </label>
         <div class="mobile-header-actions">
-        <nav class="quick-actions">
+        <nav class="quick-actions quick-actions-desktop">
           <a href="/admin" class="quick-link quick-link-account"><span class="quick-icon" aria-hidden="true"></span><span>Minha conta</span></a>
           <a href="/favoritos" class="quick-link quick-link-favorites"><span class="quick-icon" aria-hidden="true"></span><span>Favoritos</span></a>
-          <a href="/carrinho" class="quick-link quick-link-cart"><span class="quick-icon" aria-hidden="true"></span><span>Carrinho</span><strong id="cart-count">0</strong></a>
+          <a href="/carrinho" class="quick-link quick-link-cart"><span class="quick-icon" aria-hidden="true"></span><span>Carrinho</span><strong data-cart-count>0</strong></a>
         </nav>
         <button class="mobile-menu-button" type="button" aria-label="Abrir menu">
           <span></span>

@@ -40,6 +40,14 @@ function staticCacheHeaders(filePath) {
   return { "Cache-Control": "public, max-age=3600" };
 }
 
+function htmlCacheHeaders() {
+  return {
+    "Cache-Control": "no-store, no-cache, must-revalidate",
+    Pragma: "no-cache",
+    Expires: "0"
+  };
+}
+
 function readBody(req) {
   return new Promise((resolve, reject) => {
     let buffer = "";
@@ -86,13 +94,15 @@ const server = http.createServer(async (req, res) => {
       homePage(getState(), {
         q: url.searchParams.get("q") || "",
         category: url.searchParams.get("categoria") || ""
-      })
+      }),
+      "text/html; charset=utf-8",
+      htmlCacheHeaders()
     );
     return;
   }
 
   if (req.method === "GET" && pathname === "/favoritos") {
-    send(res, 200, favoritesPage(getState()));
+    send(res, 200, favoritesPage(getState()), "text/html; charset=utf-8", htmlCacheHeaders());
     return;
   }
 
@@ -103,22 +113,22 @@ const server = http.createServer(async (req, res) => {
       notFound(res);
       return;
     }
-    send(res, 200, productPage(getState(), product));
+    send(res, 200, productPage(getState(), product), "text/html; charset=utf-8", htmlCacheHeaders());
     return;
   }
 
   if (req.method === "GET" && pathname === "/carrinho") {
-    send(res, 200, cartPage(getState()));
+    send(res, 200, cartPage(getState()), "text/html; charset=utf-8", htmlCacheHeaders());
     return;
   }
 
   if (req.method === "GET" && pathname === "/checkout") {
-    send(res, 200, checkoutPage(getState()));
+    send(res, 200, checkoutPage(getState()), "text/html; charset=utf-8", htmlCacheHeaders());
     return;
   }
 
   if (req.method === "GET" && pathname === "/admin") {
-    send(res, 200, adminPage(getState()));
+    send(res, 200, adminPage(getState()), "text/html; charset=utf-8", htmlCacheHeaders());
     return;
   }
 
@@ -128,7 +138,7 @@ const server = http.createServer(async (req, res) => {
     const tracking = trackingCode
       ? state.trackingEvents.find((item) => item.trackingCode === trackingCode)
       : null;
-    send(res, 200, trackingPage(state, tracking));
+    send(res, 200, trackingPage(state, tracking), "text/html; charset=utf-8", htmlCacheHeaders());
     return;
   }
 

@@ -1803,20 +1803,44 @@ td {
 
   .topbar {
     display: grid;
-    grid-template-columns: 42px minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "brand cart menu"
+      "search search search";
     align-items: center;
+    gap: 6px;
+    padding: 6px 0 2px;
+  }
+
+  .brand {
+    grid-area: brand;
+    min-width: 0;
     gap: 8px;
-    padding: 8px 0 4px;
+    align-self: center;
   }
 
   .quick-actions {
-    grid-template-columns: repeat(3, auto);
-    gap: 6px;
+    grid-area: cart;
+    grid-template-columns: auto;
+    gap: 0;
     justify-content: end;
+  }
+
+  .mobile-menu-button {
+    grid-area: menu;
+    justify-self: end;
+  }
+
+  .quick-actions {
+    justify-self: end;
   }
 
   .quick-actions a span:not(.quick-icon),
   .quick-actions a strong {
+    display: none;
+  }
+
+  .quick-actions a:not(.quick-link-cart) {
     display: none;
   }
 
@@ -1829,7 +1853,7 @@ td {
   }
 
   .searchbar {
-    grid-column: 1 / -1;
+    grid-area: search;
     width: 100%;
     min-height: 48px;
     border-radius: 12px;
@@ -1848,15 +1872,7 @@ td {
   }
 
   .mobile-cep-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0 8px;
-    padding: 14px 14px 12px;
-    background: #fff;
-    border: 1px solid #edf1f7;
-    border-radius: 0;
-    box-shadow: none;
+    display: none;
   }
 
   .mobile-cep-copy {
@@ -1948,7 +1964,7 @@ td {
     box-shadow: none;
     border-radius: 0;
     padding: 4px 0 4px;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     gap: 0;
     overflow: hidden;
   }
@@ -2005,7 +2021,7 @@ td {
   }
 
   .hero-carousel {
-    margin: 0 10px 8px;
+    margin: 0 10px 6px;
     border-radius: 10px;
     box-shadow: none;
   }
@@ -2036,20 +2052,23 @@ td {
   }
 
   .hero-side-arrow {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     top: auto;
-    bottom: 14px;
+    bottom: 18px;
     transform: none;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
+    border-color: rgba(207, 216, 232, 0.7);
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+    opacity: 0.92;
   }
 
   .hero-side-arrow.left {
-    left: 6px;
+    left: 8px;
   }
 
   .hero-side-arrow.right {
-    right: 6px;
+    right: 8px;
   }
 
   .hero-controls {
@@ -2064,14 +2083,14 @@ td {
   }
 
   .hero-dots {
-    bottom: 8px;
-    gap: 8px;
+    bottom: 16px;
+    gap: 6px;
   }
 
   .hero-dots button,
   .hero-dots .active {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 999px;
   }
 
@@ -2263,7 +2282,7 @@ td {
   }
 
   .topbar {
-    grid-template-columns: 40px minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
     gap: 6px;
     padding: 6px 0 2px;
   }
@@ -2274,8 +2293,7 @@ td {
   }
 
   .brand {
-    min-width: 0;
-    gap: 8px;
+    gap: 7px;
   }
 
   .brand-mark {
@@ -2303,6 +2321,13 @@ td {
   .search-icon {
     min-width: 72px;
     font-size: 0.72rem;
+  }
+
+  .hero-side-arrow {
+    width: 22px;
+    height: 22px;
+    bottom: 14px;
+    font-size: 0.66rem;
   }
 
   .carousel-track {
@@ -2359,6 +2384,11 @@ td {
     min-height: 36px;
   }
 
+  .mobile-menu-button {
+    min-width: 36px;
+    height: 36px;
+  }
+
   .carousel-track {
     grid-auto-columns: 168px;
   }
@@ -2384,6 +2414,10 @@ td {
   .search-icon {
     min-width: 66px;
     font-size: 0.68rem;
+  }
+
+  .hero-dots {
+    bottom: 12px;
   }
 
   .mobile-finance-strip span {

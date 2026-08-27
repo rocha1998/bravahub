@@ -285,7 +285,8 @@ button {
 }
 
 .mobile-header-row,
-.brand-mobile {
+.brand-mobile,
+.mobile-brand-link {
   display: none;
 }
 
@@ -2470,13 +2471,16 @@ td {
     order: 0;
   }
 
-  .topbar > .mobile-header-row > .brand-mobile {
+  .topbar > .mobile-header-row > .brand-mobile,
+  .topbar > .mobile-header-row > .mobile-brand-link {
     display: flex !important;
     justify-content: center;
     grid-column: 3;
     width: 100%;
     min-width: 0;
     padding: 0 6px;
+    align-items: center;
+    text-decoration: none;
   }
 
   .brand-mobile .brand-copy {
@@ -2528,7 +2532,8 @@ td {
     grid-column: 2;
   }
 
-  .topbar > .mobile-header-row > .brand-mobile {
+  .topbar > .mobile-header-row > .brand-mobile,
+  .topbar > .mobile-header-row > .mobile-brand-link {
     grid-column: 3;
   }
 

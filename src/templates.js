@@ -1,6 +1,6 @@
 const { money, escapeHtml, formatDate } = require("./utils");
 
-const ASSET_VERSION = "20260827-4";
+const ASSET_VERSION = "20260827-5";
 
 function stars(rating) {
   const rounded = Math.round(rating);
@@ -214,7 +214,7 @@ function header(state) {
             <span class="quick-icon" aria-hidden="true"></span>
             <strong data-cart-count>0</strong>
           </a>
-          <a href="/" class="brand brand-mobile">
+          <a href="/" class="mobile-brand-link brand-mobile">
             <div class="brand-copy">
               <strong>${escapeHtml(state.store.name)}</strong>
               <small>loja online</small>

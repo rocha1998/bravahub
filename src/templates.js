@@ -39,24 +39,24 @@ const imageAssets = {
 
 const heroImageAssets = [
   {
-    desktop: "/public/images/bainner1.webp",
-    mobile: "/public/images/bainner1-mobile.webp",
+    desktop: "/public/images/bainner1.webp?v=20260827",
+    mobile: "/public/images/bainner1-mobile.webp?v=20260827",
     width: 1600,
     height: 600,
     mobileWidth: 1080,
     mobileHeight: 1350
   },
   {
-    desktop: "/public/images/bainner2.webp",
-    mobile: "/public/images/bainner2-mobile.webp",
+    desktop: "/public/images/bainner2.webp?v=20260827",
+    mobile: "/public/images/bainner2-mobile.webp?v=20260827",
     width: 1600,
     height: 600,
     mobileWidth: 1080,
     mobileHeight: 1350
   },
   {
-    desktop: "/public/images/bainner3.webp",
-    mobile: "/public/images/bainner3-mobile.webp",
+    desktop: "/public/images/bainner3.webp?v=20260827",
+    mobile: "/public/images/bainner3-mobile.webp?v=20260827",
     width: 1600,
     height: 600,
     mobileWidth: 1080,

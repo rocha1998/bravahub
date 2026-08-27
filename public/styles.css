@@ -2466,6 +2466,10 @@ td {
     column-gap: 14px;
   }
 
+  .topbar > .mobile-header-row > * {
+    order: 0;
+  }
+
   .topbar > .mobile-header-row > .brand-mobile {
     display: flex !important;
     justify-content: center;
@@ -2522,6 +2526,10 @@ td {
 
   .mobile-cart-link {
     grid-column: 2;
+  }
+
+  .topbar > .mobile-header-row > .brand-mobile {
+    grid-column: 3;
   }
 
   .mobile-account-link {

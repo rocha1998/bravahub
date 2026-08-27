@@ -410,8 +410,16 @@ function homePage(state, options = {}) {
   return pageLayout({
     title: `${state.store.name} | Inicio`,
     state,
+    bodyClass: "home-page-body",
     content: `
       <main class="page-home">
+        <section class="mobile-cep-bar mobile-only">
+          <div class="mobile-cep-copy">
+            <span class="mobile-cep-icon">ENT</span>
+            <strong>Informe seu CEP</strong>
+          </div>
+          <button class="mobile-cep-action" type="button" aria-label="Acessibilidade">AC</button>
+        </section>
         ${categoryStrip(state.categories)}
         ${
           q || category
@@ -433,6 +441,14 @@ function homePage(state, options = {}) {
           <div class="hero-dots">
             ${state.banners.map((_, index) => `<button data-hero-dot="${index}"></button>`).join("")}
           </div>
+        </section>
+        <section class="mobile-finance-strip mobile-only">
+          <strong>Carnê CasasBahia</strong>
+          <span>Parcelas que cabem no bolso sem usar o limite do cartão.</span>
+        </section>
+        <section class="mobile-finance-card mobile-only">
+          <div class="mobile-finance-brand">Carnê<br />Digital</div>
+          <a href="/checkout" class="btn btn-primary">Consultar pré-aprovado</a>
         </section>
         <section class="mini-banner">
           <div class="mini-banner-copy">

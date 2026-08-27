@@ -2471,7 +2471,15 @@ td {
     display: flex;
     align-items: center;
     gap: 8px;
-    flex: 0 0 auto;
+    flex: 0 0 88px;
+  }
+
+  .mobile-header-left {
+    justify-content: flex-start;
+  }
+
+  .mobile-header-right {
+    justify-content: flex-end;
   }
 
   .brand-mobile {
@@ -2487,7 +2495,7 @@ td {
   }
 
   .brand-mobile .brand-copy strong {
-    font-size: 1.18rem;
+    font-size: 1.2rem;
     line-height: 1;
     letter-spacing: 0;
   }
@@ -2546,6 +2554,7 @@ td {
     width: 100%;
     min-height: 48px;
     border-radius: 12px;
+    margin-top: 2px;
   }
 
   .searchbar input,

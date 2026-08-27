@@ -238,18 +238,11 @@ function header(state) {
           <input id="search-input" type="search" placeholder="O que você está procurando?" />
           <span class="search-icon" aria-hidden="true"></span>
         </label>
-        <div class="mobile-header-actions">
         <nav class="quick-actions quick-actions-desktop">
           <a href="/admin" class="quick-link quick-link-account"><span class="quick-icon" aria-hidden="true"></span><span>Minha conta</span></a>
           <a href="/favoritos" class="quick-link quick-link-favorites"><span class="quick-icon" aria-hidden="true"></span><span>Favoritos</span></a>
           <a href="/carrinho" class="quick-link quick-link-cart"><span class="quick-icon" aria-hidden="true"></span><span>Carrinho</span><strong data-cart-count>0</strong></a>
         </nav>
-        <button class="mobile-menu-button" type="button" aria-label="Abrir menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        </div>
       </div>
       <div class="nav-row">
         <div class="nav-links">

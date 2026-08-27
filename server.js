@@ -22,9 +22,22 @@ const { mimeType } = require("./src/utils");
 
 const publicDir = path.join(__dirname, "public");
 
-function send(res, status, body, type = "text/html; charset=utf-8") {
-  res.writeHead(status, { "Content-Type": type });
+function send(res, status, body, type = "text/html; charset=utf-8", headers = {}) {
+  res.writeHead(status, { "Content-Type": type, ...headers });
   res.end(body);
+}
+
+function staticCacheHeaders(filePath) {
+  const extension = path.extname(filePath).toLowerCase();
+  if ([".png", ".jpg", ".jpeg", ".webp", ".svg", ".ico"].includes(extension)) {
+    return { "Cache-Control": "public, max-age=2592000, immutable" };
+  }
+
+  if ([".css", ".js"].includes(extension)) {
+    return { "Cache-Control": "public, max-age=604800" };
+  }
+
+  return { "Cache-Control": "public, max-age=3600" };
 }
 
 function readBody(req) {
@@ -62,7 +75,7 @@ const server = http.createServer(async (req, res) => {
       notFound(res);
       return;
     }
-    send(res, 200, fs.readFileSync(filePath), mimeType(filePath));
+    send(res, 200, fs.readFileSync(filePath), mimeType(filePath), staticCacheHeaders(filePath));
     return;
   }
 

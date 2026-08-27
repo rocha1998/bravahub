@@ -22,6 +22,42 @@ function icon(name) {
   return icons[name] || "SHOP";
 }
 
+const imageAssets = {
+  smarttv43: { src: "/public/images/smarttv43.webp", width: 1448, height: 1086, inset: "wide" },
+  airfryer: { src: "/public/images/air-fryei.webp", width: 1448, height: 1086, inset: "standard" },
+  vacuum: { src: "/public/images/aspirador.webp", width: 1448, height: 1086, inset: "standard" },
+  fridge: { src: "/public/images/geladeira.webp", width: 1448, height: 1086, inset: "standard" },
+  wardrobe: { src: "/public/images/gardaroupa.webp", width: 1448, height: 1086, inset: "standard" },
+  console: { src: "/public/images/console.webp", width: 1448, height: 1086, inset: "standard" },
+  orangephone: { src: "/public/images/iphone17.webp", width: 1374, height: 1145, inset: "standard" },
+  moto: { src: "/public/images/motog47.webp", width: 1448, height: 1086, inset: "standard" },
+  laptop: { src: "/public/images/notebook.webp", width: 1374, height: 1145, inset: "standard" },
+  sofa: { src: "/public/images/sofa.webp", width: 1374, height: 1145, inset: "standard" },
+  bed: { src: "/public/images/cama.webp", width: 1374, height: 1145, inset: "standard" },
+  blender: { src: "/public/images/liquidificador.webp", width: 1374, height: 1145, inset: "standard" }
+};
+
+function renderProductAsset(imageName, alt, options = {}) {
+  const asset = imageAssets[imageName];
+  if (!asset) {
+    return "";
+  }
+
+  const loading = options.loading || "eager";
+  const className = options.className ? ` ${options.className}` : "";
+  return `
+    <img
+      class="product-media product-media-${asset.inset}${className}"
+      src="${asset.src}"
+      alt="${escapeHtml(alt)}"
+      width="${asset.width}"
+      height="${asset.height}"
+      loading="${loading}"
+      decoding="async"
+    />
+  `;
+}
+
 function productCard(product) {
   const tags = product.tags
     .map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`)
@@ -31,6 +67,7 @@ function productCard(product) {
     <article class="product-card">
       <a class="product-link" href="/produto/${escapeHtml(product.slug)}">
         <div class="product-image image-${escapeHtml(product.images[0])}">
+          ${renderProductAsset(product.images[0], product.name, { loading: "lazy" })}
           <span class="badge badge-discount">${escapeHtml(product.badge)}</span>
         </div>
         <h3 class="product-title">${escapeHtml(product.name)}</h3>
@@ -269,7 +306,7 @@ function pageLayout({ title, state, content, bodyClass = "" }) {
         ${content}
         ${footer(state)}
         <script>window.__INITIAL_STATE__ = ${JSON.stringify(state)};</script>
-        <script src="/public/app.js"></script>
+        <script src="/public/app.js" defer></script>
       </body>
     </html>
   `;
@@ -418,9 +455,19 @@ function productPage(state, product) {
       <main class="product-page simple-page">
         <section class="product-layout">
           <div class="product-gallery">
-            <div class="product-image product-detail image-${escapeHtml(product.images[0])}"></div>
+            <div class="product-image product-detail image-${escapeHtml(product.images[0])}">
+              ${renderProductAsset(product.images[0], product.name)}
+            </div>
             <div class="thumb-row">
-              ${product.images.map((image) => `<button class="thumb image-${escapeHtml(image)}"></button>`).join("")}
+              ${product.images
+                .map(
+                  (image) => `
+                    <button class="thumb image-${escapeHtml(image)}" type="button" aria-label="Miniatura de ${escapeHtml(product.name)}">
+                      ${renderProductAsset(image, `Miniatura de ${product.name}`, { className: "product-media-thumb" })}
+                    </button>
+                  `
+                )
+                .join("")}
             </div>
           </div>
           <div class="product-info">

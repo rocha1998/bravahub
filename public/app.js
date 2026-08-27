@@ -6,6 +6,49 @@
     return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
   }
 
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function assetByImage(imageName) {
+    const assets = {
+      smarttv43: { src: "/public/images/smarttv43.webp", width: 1448, height: 1086, variant: "wide" },
+      airfryer: { src: "/public/images/air-fryei.webp", width: 1448, height: 1086, variant: "standard" },
+      vacuum: { src: "/public/images/aspirador.webp", width: 1448, height: 1086, variant: "standard" },
+      fridge: { src: "/public/images/geladeira.webp", width: 1448, height: 1086, variant: "standard" },
+      wardrobe: { src: "/public/images/gardaroupa.webp", width: 1448, height: 1086, variant: "standard" },
+      console: { src: "/public/images/console.webp", width: 1448, height: 1086, variant: "standard" },
+      orangephone: { src: "/public/images/iphone17.webp", width: 1374, height: 1145, variant: "standard" },
+      moto: { src: "/public/images/motog47.webp", width: 1448, height: 1086, variant: "standard" },
+      laptop: { src: "/public/images/notebook.webp", width: 1374, height: 1145, variant: "standard" },
+      sofa: { src: "/public/images/sofa.webp", width: 1374, height: 1145, variant: "standard" },
+      bed: { src: "/public/images/cama.webp", width: 1374, height: 1145, variant: "standard" },
+      blender: { src: "/public/images/liquidificador.webp", width: 1374, height: 1145, variant: "standard" }
+    };
+    return assets[imageName] || null;
+  }
+
+  function renderProductMedia(imageName, alt, className) {
+    const asset = assetByImage(imageName);
+    if (!asset) return "";
+    return `
+      <img
+        class="product-media product-media-${asset.variant}${className ? ` ${className}` : ""}"
+        src="${asset.src}"
+        alt="${escapeHtml(alt)}"
+        width="${asset.width}"
+        height="${asset.height}"
+        loading="eager"
+        decoding="async"
+      />
+    `;
+  }
+
   function getCart() {
     try {
       return JSON.parse(localStorage.getItem(storageKey) || "[]");
@@ -61,7 +104,7 @@
         subtotal += lineTotal;
         return `
           <article class="cart-row">
-            <div class="cart-thumb image-${product.images[0]}"></div>
+            <div class="cart-thumb image-${product.images[0]}">${renderProductMedia(product.images[0], product.name)}</div>
             <div class="cart-copy">
               <strong>${product.name}</strong>
               <span>${formatMoney(product.price)}</span>

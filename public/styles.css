@@ -517,7 +517,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: url("/public/images/eletrodomestico.png") center/cover no-repeat;
+  background: url("/public/images/eletrodomestico.webp") center/cover no-repeat;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
@@ -541,7 +541,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: url("/public/images/portateis.png") center/cover no-repeat;
+  background: url("/public/images/portateis.webp") center/cover no-repeat;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
@@ -565,7 +565,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: url("/public/images/tvs.png") center/cover no-repeat;
+  background: url("/public/images/tvs.webp") center/cover no-repeat;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
@@ -589,7 +589,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: url("/public/images/iphone.png") center/cover no-repeat;
+  background: url("/public/images/iphone.webp") center/cover no-repeat;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
@@ -613,7 +613,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: url("/public/images/smartphone.png") center/cover no-repeat;
+  background: url("/public/images/smartphone.webp") center/cover no-repeat;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
@@ -637,7 +637,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: url("/public/images/moveis.png") center/cover no-repeat;
+  background: url("/public/images/moveis.webp") center/cover no-repeat;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
@@ -661,7 +661,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: url("/public/images/ar.png") center/cover no-repeat;
+  background: url("/public/images/ar.webp") center/cover no-repeat;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
@@ -750,15 +750,15 @@ button {
 }
 
 .hero-slide-banner-1::before {
-  background-image: url("/public/images/bainner1.png");
+  background-image: url("/public/images/bainner1.webp");
 }
 
 .hero-slide-banner-2::before {
-  background-image: url("/public/images/bainner2.png");
+  background-image: url("/public/images/bainner2.webp");
 }
 
 .hero-slide-banner-3::before {
-  background-image: url("/public/images/bainner3.png");
+  background-image: url("/public/images/bainner3.webp");
 }
 
 .theme-sunrise {
@@ -1152,6 +1152,7 @@ button {
 .cart-thumb,
 .thumb {
   position: relative;
+  overflow: hidden;
   border-radius: 12px;
   border: 1px solid #ebeff6;
   background: linear-gradient(180deg, #ffffff, #f7f9fc);
@@ -1166,18 +1167,7 @@ button {
   height: 460px;
 }
 
-.image-airfryer::before,
-.image-vacuum::before,
 .image-tv::before,
-.image-fridge::before,
-.image-wardrobe::before,
-.image-console::before,
-.image-orangephone::before,
-.image-moto::before,
-.image-laptop::before,
-.image-sofa::before,
-.image-bed::before,
-.image-blender::before,
 .image-box::before {
   content: "";
   position: absolute;
@@ -1185,70 +1175,23 @@ button {
   border-radius: 24px;
 }
 
-.image-smarttv43::before {
-  content: "";
+.product-media {
   position: absolute;
-  inset: 16% 7% 18%;
+  display: block;
+  width: calc(100% - 20%);
+  height: calc(100% - 24%);
+  inset: 11% 10% 13%;
   border-radius: 0;
-  background: url("/public/images/smarttv43.png") center center / contain no-repeat;
+  object-fit: contain;
 }
 
-.image-airfryer::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/air-fryei.png") center center / contain no-repeat;
+.product-media-wide {
+  width: calc(100% - 14%);
+  height: calc(100% - 34%);
+  inset: 16% 7% 18%;
 }
-.image-vacuum::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/aspirador.png") center center / contain no-repeat;
-}
+
 .image-tv::before { background: linear-gradient(135deg, #1e3a8a, #ec4899 40%, #f59e0b); }
-.image-fridge::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/geladeira.png") center center / contain no-repeat;
-}
-.image-wardrobe::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/gardaroupa.png") center center / contain no-repeat;
-}
-.image-console::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/console.png") center center / contain no-repeat;
-}
-.image-orangephone::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/iphone17.png") center center / contain no-repeat;
-}
-.image-moto::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/motog47.png") center center / contain no-repeat;
-}
-.image-laptop::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/notebook.png") center center / contain no-repeat;
-}
-.image-sofa::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/sofa.png") center center / contain no-repeat;
-}
-.image-bed::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/cama.png") center center / contain no-repeat;
-}
-.image-blender::before {
-  inset: 11% 10% 13%;
-  border-radius: 0;
-  background: url("/public/images/liquidificador.png") center center / contain no-repeat;
-}
 .image-box::before { background: linear-gradient(135deg, #dbeafe, #93c5fd); }
 
 .badge {
@@ -1511,6 +1454,11 @@ button {
 .thumb {
   width: 82px;
   height: 82px;
+}
+
+.product-media-thumb {
+  width: calc(100% - 20%);
+  height: calc(100% - 24%);
 }
 
 .buy-box,

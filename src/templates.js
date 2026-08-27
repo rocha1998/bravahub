@@ -40,18 +40,27 @@ const imageAssets = {
 const heroImageAssets = [
   {
     desktop: "/public/images/bainner1.webp",
+    mobile: "/public/images/bainner1-mobile.webp",
     width: 1600,
-    height: 600
+    height: 600,
+    mobileWidth: 1080,
+    mobileHeight: 1350
   },
   {
     desktop: "/public/images/bainner2.webp",
+    mobile: "/public/images/bainner2-mobile.webp",
     width: 1600,
-    height: 600
+    height: 600,
+    mobileWidth: 1080,
+    mobileHeight: 1350
   },
   {
     desktop: "/public/images/bainner3.webp",
+    mobile: "/public/images/bainner3-mobile.webp",
     width: 1600,
-    height: 600
+    height: 600,
+    mobileWidth: 1080,
+    mobileHeight: 1350
   }
 ];
 
@@ -84,6 +93,7 @@ function renderHeroBannerImage(index, alt) {
 
   return `
     <picture class="hero-picture">
+      ${asset.mobile ? `<source media="(max-width: 600px)" srcset="${asset.mobile}" />` : ""}
       <img
         class="hero-banner-image"
         src="${asset.desktop}"
